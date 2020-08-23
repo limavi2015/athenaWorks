@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"medicalInstitution.medication"}],"uuid":"7c3729bb6b8e4e4eac8bcfb1551c53bb"}

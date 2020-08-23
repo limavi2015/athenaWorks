@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"medicalInstitution.immunization"}],"uuid":"20d0fd48ff3d49998691a990dddb345a"}

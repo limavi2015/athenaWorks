@@ -1,0 +1,492 @@
+{
+	"variables": [],
+	"info": {
+		"name": "medicalInstitution_postman_collection",
+		"_postman_id": "e69cd943-457b-c2f1-e998-7913f4d10484",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "patient",
+			"description": "",
+			"item": [
+				{
+					"name": "patient_by_identification",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/patients?identification=444",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "identification",
+									"value": "444",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "patients",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/patients",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save_patient",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/patients",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identification\": 444,\n    \"firstName\": \"Rory\",\n    \"lastName\": \"Gilmore\",\n    \"gender\": \"Female\",\n    \"maritalStatus\": \"Single\",\n    \"religiousaAffiliation\": \"Christian\",\n    \"ethnicity\": \"American\",\n    \"languageSpoken\": \"English\",\n    \"address\": \"17 Dams Road, Portland, OR 97006\",\n    \"telephone\": \"415-555-1229\",\n    \"birthday\": \"March 7, 1960\",\n    \"guardian\": {\n        \"role\": \"Sister\",\n        \"firtName\": \"Paris\",\n        \"lastName\": \"Geller\",\n        \"address\": \"1357 Amber Drive, Beaverton, OR 97006\",\n        \"telephone\": \"816-276-6909\"\n    },\n    \"provider\": {\n        \"nameProvider\": \"Ashby Medical Center\",\n        \"address\": \"1002 Healtcare Dr, Portland, OR 97266\",\n        \"telephone\": \"415-555-1200\"\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete_patient",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/patients?identification=444",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "identification",
+									"value": "444",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "allergy",
+			"description": "",
+			"item": [
+				{
+					"name": "save_allergy",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/allergies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientIdentification\": 222,\n    \"allergyName\" : \"cetirizine4\",\n    \"reaction\" : \"swelling\",\n    \"severity\" : \"Moderate\"\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete_allergy",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/allergies?id=5f42a9322d578f3e0119ef41",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"allergies"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f42a9322d578f3e0119ef41",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "allergies_by_patient_identification",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/allergies?patientIdentification=222",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"allergies"
+							],
+							"query": [
+								{
+									"key": "patientIdentification",
+									"value": "222",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "immunization",
+			"description": "",
+			"item": [
+				{
+					"name": "save_immunization",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/immunizations",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientIdentification\": 222,\n    \"date\": \"May 2001\",\n    \"immunizationName\": \"Influenza virus vaccine, im\",\n    \"type\": \"Intramuscular injection\",\n    \"doseQuantity\": \"(value/unit):50/mcg\",\n    \"instructions\": \"Mild pain or soreness in the local\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete_immunization",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/immunizations?id=5f42ab032d578f3e0119efee",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"immunizations"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f42ab032d578f3e0119efee",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "immunizations_by_patient_identification",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/immunizations?patientIdentification=111",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"immunizations"
+							],
+							"query": [
+								{
+									"key": "patientIdentification",
+									"value": "111",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "medication",
+			"description": "",
+			"item": [
+				{
+					"name": "save_medication",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/medications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientIdentification\": 222,\n    \"date\": \"May 2008\",\n    \"medicationName\": \"Tetnus and diphtheria toxoids\",\n    \"type\": \"Intramuscular injection\",\n    \"instructions\": \"Mild pain or soreness in the local\",\n    \"doseQuantity\": \"(value/unit):50/mcg\",\n    \"rateQuantity\": \"1/day\",\n    \"namePrescriber\": \"Ashby medical center\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "medications_by_patient_identification",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/medications?patientIdentification=111",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"medications"
+							],
+							"query": [
+								{
+									"key": "patientIdentification",
+									"value": "111",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete_medication",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/medications?id=5f42ab892d578f3e0119f02d",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"medications"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f42ab892d578f3e0119f02d",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "planOfCare",
+			"description": "",
+			"item": [
+				{
+					"name": "medications_by_patient_identification",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/plansOfCare?patientIdentification=222",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"plansOfCare"
+							],
+							"query": [
+								{
+									"key": "patientIdentification",
+									"value": "222",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "save_planOfCare",
+					"request": {
+						"url": "http://18.216.93.91:3789/api/plansOfCare",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patientIdentification\": 222,\n    \"planDate\": \"June 1 2020\",\n    \"planActivity\": \"Office consultation\",\n    \"instructions\": \"consultation with dr Maria Grey\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete_planOfCare",
+					"request": {
+						"url": {
+							"raw": "http://18.216.93.91:3789/api/plansOfCare?id=5f42b226bbe1ce72fb6830f7",
+							"protocol": "http",
+							"host": [
+								"18",
+								"216",
+								"93",
+								"91"
+							],
+							"port": "3789",
+							"path": [
+								"api",
+								"plansOfCare"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5f42b226bbe1ce72fb6830f7",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
